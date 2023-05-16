@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+   
+        <style>
+            
+                .go{
+background-image:url('http://camphighland.com/wp-content/uploads/2018/05/blog-posts-bg.png');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 8px;
+  margin: 24px;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+  }
+ 
+  .card img {
+      height:250px;
+      width:250px;
+  }
+ 
+  .title {
+  padding-top: 16px;
+  }
+
+  .container {
+padding: 2px 16px;
+  }
+  #p_list{
+    
+    float:left;
+    
+}
+
+        </style>
+</head>
+<body ng-app="shoppingcart" ng-controller="shoppingCTR">
+    <div class="go"><br><br>
+        <center><H1 style="
+           background: linear-gradient(45deg, #e6b800, #388c34, #0d47a1, #ff9f80, #6a1b9a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">CAMP STORE</H1></center>
+        <br><br>
+        <form>
+        &nbsp;&nbsp;CAMP NO&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" name="cmp" placeholder="21CMP001"pattern=[2]{1}[1]{1}[C]{1}[M]{1}[P]{1}[0-9]{3} required/><BR><BR>
+          &nbsp;&nbsp;CAMPER ID&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" name="cmp" placeholder="enter your id "required/><BR><BR>
+        </form>
+        <div style="padding-left:90%;padding-right: 5px;">
+        <button type="button" data-toggle="modal" data-target="#cart"style="font-size:20px;height:45px;background-color:#A2C4E0;border-radius: 8px;">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>&nbsp;</button>
+           </div>
+    <div class="row">
+        <div class="col-lg "style="padding-left:50px;"><div id = "product">
+            <div id = "p_list" ng-repeat = "product in products ">
+          <div class="card">
+          <img ng-src = "{{product.p_image}}"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="ART" >
+          <div class="container">
+            <BR>
+            <center><h5><span style="font-size:20px;"><b>{{product.p_name}}</b></span></h5></center><BR>
+                  <h6>Price:<s> {{product.p_price}}</s><br><br>Discount price: {{product.d_price}}<br><br>          
+                   
+              <a class="add-to-cart btn btn-warning"ng-click = "add_cart(product)">Add to cart
+                  &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                     <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                     <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                   </svg></a>
+                   
+        </div></div></div></div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><div id = "product">
+            <div id = "p_list" ng-repeat = "product in products ">
+                  <img ng-src = "{{product.p_image}}" class="img-fluid" alt="Image" style="max-width: 100%; max-height: 500px;">
+                </div>  
+              </div>
+            </div>
+              </div></div></div></div></div>
+              <div></div>
+              <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body"style="background-image:url('http://camphighland.com/wp-content/uploads/2018/05/blog-posts-bg.png');">
+                    
+          
+                
+                <div class = "panel-body table-responsive">
+                    <table class = "table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Discount Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = "cart in carts" ng-init = "setTotals(cart)">
+                                <td>{{cart.p_name}}</td>
+                                <td>{{cart.p_price}}</td>
+                                <td>{{cart.d_price}}</td>
+                                <td><button type = "button" ng-click = "remove_cart(cart)" class = "btn btn-danger"> X</button></td>
+                            </tr>
+                            <tr >
+                                <td ><B>Total Amount</B></td>
+                                <td><B>{{total1}}</B></td>
+                            </tr>
+                            <tr>
+                                <td><B>Discount Amount</B></td>
+                                <td><B>{{discount}}</B></td>
+                            </tr>
+                            <tr>
+                                <td ><B>To pay</B></td>
+                                <td><B>{{total}}</B></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer"style="background-image:url('http://camphighland.com/wp-content/uploads/2018/05/blog-posts-bg.png');">
+                    <button class=" btn btn-danger"ng-click="remove_all()">Clear Cart</button>
+                  <button type="button" class="btn btn-primary"onclick="pro()">Order now</button>
+                </div>
+              </div>
+            </div>
+          </div> </div>
+
+        <script>
+            var app = angular.module("shoppingcart", [])
+.controller("shoppingCTR", function($scope){
+    $scope.carts=[];
+    $scope.products = [
+        {p_id: "1", p_name: "Shirt1", p_image: "https://media-tommy.6thstreet.com/media/catalog/product/cache/e6956cdef1533b4c51bb49f614c56907/k/b/kb0kb074410k6-1.jpg", p_price: 590,d_price:450},
+        {p_id: "2", p_name: "Shirt2", p_image: "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/22508642/2023/3/25/6c5f1070-ab90-421e-8a2e-fbd1e4ccc2631679691490894BONKIDSBoysWhitePrintedPocketsT-shirt2.jpg", p_price: 680,d_price:500},
+        {p_id: "3", p_name: "Shirt3", p_image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1662130112_1367320.jpg?w=360&dpr=1.5", p_price: 480,d_price:350},
+        {p_id: "4", p_name: "Shirt4", p_image: "https://res.cloudinary.com/teepublic/image/private/s--Mr1SOVlI--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_416/c_crop,g_north_west,h_554,w_416,x_0,y_0/g_north_west,u_upload:v1446840612:production:blanks:cmnytzrskw2rtarpswec,x_-424,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1617568874/production/designs/20838989_0.jpg", p_price: 450,d_price:400},
+        {p_id: "5", p_name: "Shoe1", p_image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWilQgNF04QBVDZg2RirX_oXwdsUAv8oHgrw&usqp=CAU", p_price: 700,d_price:649},
+        {p_id: "6", p_name: "Shoe2", p_image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYiTSwVvXii2E33KfLa9x1NIb1ejiXnm-2A&usqp=CAU", p_price: 550,d_price:499},
+        {p_id: "7", p_name: "Shoe3", p_image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGqP5VAyoUo_lqBGg46v0laxUH0ExXdZf7ww&usqp=CAU", p_price: 600,d_price:459},
+        {p_id: "8", p_name: "Shoe4", p_image:"https://cdn.shopify.com/s/files/1/0062/1532/products/40395-4OE_WALLYAMERICANA_DENIMSTRIPE_PAIRSIDE.jpg?v=1682013461&width=400", p_price: 530,d_price:479},
+        {p_id: "9", p_name: "Bag1", p_image:"https://www.nicepng.com/png/detail/35-359972_alaska-backpack-snowberg-school-bag-backpack-aesthetic-backpack.png", p_price: 900,d_price:799},
+        {p_id: "10", p_name: "Bag2", p_image:"https://m.media-amazon.com/images/I/61i2vha-WGL._SX679_.jpg", p_price: 700,d_price:648},
+        {p_id: "11", p_name: "Bag3", p_image:"https://m.media-amazon.com/images/I/416V0GYH2kL.jpg", p_price: 999,d_price:888},
+        {p_id: "12", p_name: "Bag4", p_image:"https://m.media-amazon.com/images/I/71lx4rLS+CL._AC_SX679_.jpg", p_price: 789,d_price:719},
+        {p_id: "13", p_name: "Bottle1", p_image:"https://ctl.s6img.com/society6/img/syPyCIxhvASu7AUVK0F9ETcjB_w/w_1500/water-bottles/18oz/straw-lid/front/~artwork,fw_3390,fh_2230,fx_-15,iw_3419,ih_2230/s6-0041/a/18803333_4925868/~~/horse-yy9-water-bottles.jpg", p_price: 859,d_price:698},
+        {p_id: "14", p_name: "Bottle2", p_image:"https://img.ltwebstatic.com/images3_pi/2022/11/28/166962066152ebe3c011e56952b45ebc415ad4c516_thumbnail_600x.webp", p_price: 759,d_price:639},
+        {p_id: "15", p_name: "Bottle3", p_image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-56NLUn3gN-VdGwoBb1CbG4GTYil-8hyGUvMVnwT1iGXQpmLuQCWcSnKr5_hzx31R6BU&usqp=CAU", p_price: 987,d_price:897},
+        {p_id: "16", p_name: "Bottle4", p_image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9O8odU_3QjvBLcSiVpQv8vbvljOAPh8Z9YF2g340v54q1Db1-o_6GU-zwVejZpVjqTUc&usqp=CAU", p_price: 795,d_price:699},
+    ];
+                 
+    $scope.add_cart = function(product){
+        if(product){
+            $scope.carts.push({p_id: product.p_id, p_name: product.p_name, p_price: product.p_price,d_price: product.d_price});
+        }   
+    }
+                         
+    $scope.total = 0;
+    $scope.total1 = 0;        
+    $scope.discount=0;
+    $scope.setTotals = function(cart){
+        if(cart){
+            $scope.total += cart.d_price;
+            $scope.total1 += cart.p_price;
+            $scope.discount+=cart.p_price-cart.d_price;
+        }
+    }
+    
+    $scope.remove_cart = function(cart){
+        if(cart){
+            $scope.carts.splice($scope.carts.indexOf(cart), 1);
+            $scope.total -= cart.d_price;
+            $scope.total1 -= cart.p_price;
+        }
+    }
+    $scope.remove_all = function(cart){
+        
+            $scope.carts=[];
+            $scope.total = 0;
+            $scope.total1 = 0;
+            $scope.discount=0;
+    }
+});
+function pro(){
+    
+    new swal("DONE", "Your order has been placed successfully", "success")
+    } 
+</script>
+</body>
+</html>
